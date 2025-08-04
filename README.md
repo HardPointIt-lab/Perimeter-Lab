@@ -52,9 +52,7 @@ Install:
 sudo apt update && sudo apt install suricata
 Set interface IP:
 
-bash
-Копировать
-Редактировать
+
 sudo ip addr add 10.10.2.2/24 dev enp0s8
 sudo ip link set dev enp0s8 up
 Set default gateway:
