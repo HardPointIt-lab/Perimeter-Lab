@@ -1,65 +1,55 @@
-# Perimeter-Lab
-# Network Security Perimeter Lab (OpenWRT → RouterOS → Suricata IPS)
-This project builds a virtualized perimeter security lab using physical and virtual components.  
-The goal is to pass all client traffic through a MikroTik (RouterOS) and Suricata in inline IPS mode.
+# 🛡️ Perimeter Security Lab — OpenWRT → RouterOS → Suricata (Inline IPS)
+
+This lab builds a simple virtualized perimeter where all client traffic passes through:
+OpenWRT → RouterOS (MikroTik) → Suricata IPS.  
+The goal is to simulate real-world network inspection, NAT, routing, and inline threat prevention.
 
 ---
 
-## 🧱 Architecture
+## 📐 Network Architecture
+
+```plaintext
 [Clients]
-↓
+    ↓ (DHCP 10.10.1.0/24)
 [OpenWRT Router]
-LAN: 10.10.1.1
-↓
+    LAN: 10.10.1.1
+    ↓
 [RouterOS VM]
-ether1: 10.10.1.100 (WAN side)
-ether2: 10.10.2.1 (LAN to Suricata)
-↓
+    ether1 (WAN): 10.10.1.100
+    ether2 (LAN): 10.10.2.1
+    ↓
 [Suricata VM]
-enp0s8: 10.10.2.2
-↓
+    enp0s8: 10.10.2.2
+    ↓
 [Internet via Wi-Fi (192.168.3.x)]
 
+💡 IP Address Plan
+Device	Interface	IP Address	Description
+OpenWRT	br-lan	10.10.1.1/24	Gateway + DHCP server
+RouterOS	ether1	10.10.1.100/24	WAN (OpenWRT connection)
+RouterOS	ether2	10.10.2.1/24	LAN → Suricata
+Suricata VM	enp0s8	10.10.2.2/24	Inline IPS interface
 
-🖼 See: [`diagrams/network_diagram.png`](./diagrams/network_diagram.png)  
-🗂 Editable: [`diagrams/network_diagram.drawio`](./diagrams/network_diagram.drawio)
-
----
-
-## 💡 IP Plan
-
-| Device       | Interface         | IP Address      | Role                        |
-|--------------|-------------------|-----------------|-----------------------------|
-| OpenWRT      | br-lan            | 10.10.1.1/24     | DHCP + main gateway         |
-| RouterOS     | ether1            | 10.10.1.100/24   | Connects to OpenWRT (WAN)   |
-| RouterOS     | ether2            | 10.10.2.1/24     | Internal side to Suricata   |
-| Suricata VM  | enp0s8            | 10.10.2.2/24     | Inline interface            |
-
----
-
-## ⚙️ RouterOS Configuration
-
+⚙️ RouterOS Configuration
 
 /ip address add address=10.10.1.100/24 interface=ether1
 /ip address add address=10.10.2.1/24 interface=ether2
 
 /ip route add dst-address=0.0.0.0/0 gateway=10.10.1.1
+
 /ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade
 
-Suricata Setup
-Install:
+🛠 Suricata Setup (Inline IPS Mode)
+🧩 1. Install Suricata (on Ubuntu/Debian):
+sudo apt update
+sudo apt install suricata
 
-sudo apt update && sudo apt install suricata
-Set interface IP:
-
-
+🌐 2. Configure Interface:
 sudo ip addr add 10.10.2.2/24 dev enp0s8
-sudo ip link set dev enp0s8 up
-Set default gateway:
-
+sudo ip link set enp0s8 up
 sudo ip route add default via 10.10.2.1
-Update /etc/suricata/suricata.yaml:
 
+3. Edit /etc/suricata/suricata.yaml
 default-rule-path: /etc/suricata/rules
 rule-files:
   - local.rules
@@ -70,14 +60,21 @@ af-packet:
     disable-promisc: no
     use-mmap: yes
     checksum-checks: no
-Test config:
 
+✅ 4. Test config & run
 sudo suricata -T -c /etc/suricata/suricata.yaml
-
 sudo systemctl enable --now suricata
-🔥 Sample Rules (local.rules)
-rules
 
+🔥 Suricata Rules (/etc/suricata/rules/local.rules)
 drop icmp any any -> any any (msg:"BLOCK ICMP"; sid:1000001; rev:1;)
-alert http any any -> any any (msg:"HTTP Traffic Detected"; sid:1000002; rev:1;)
+alert http any any -> any any (msg:"HTTP Detected"; sid:1000002; rev:1;)
+
+Check logs:
+tail -f /var/log/suricata/fast.log
+
+👤 Author
+📡 HardPoint IT Lab
+
+
+
 
