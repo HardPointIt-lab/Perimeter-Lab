@@ -1,4 +1,4 @@
-# 🔐 HardPointIt-lab
+# 🔐 HardPoint-It-lab
 
 **Perimeter-Lab** — a hands-on network security lab with **Suricata IPS/IDS**, **Grafana dashboards**, **DNS-over-HTTPS on OpenWrt**, and **RouterOS routing**.  
 All client traffic is inspected through Suricata in inline mode, while DNS queries are encrypted with DoH.  
