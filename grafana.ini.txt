@@ -1,0 +1,1168 @@
+DEFAULT	
+app_mode	false
+instance_name	Suricata
+target	all
+alerting	
+concurrent_render_limit	5
+enabled	false
+error_or_timeout	alerting
+evaluation_timeout_seconds	30
+execute_alerts	true
+max_annotation_age	
+max_annotations_to_keep	0
+max_attempts	3
+min_interval_seconds	10
+nodata_or_nullvalues	no data
+notification_timeout_seconds	30
+analytics	
+application_insights_connection_string	
+application_insights_endpoint_url	
+browser_console_reporter	false
+check_for_plugin_updates	true
+check_for_updates	true
+enabled	true
+feedback_links_enabled	true
+google_analytics_4_id	
+google_analytics_4_send_manual_page_views	false
+google_analytics_ua_id	
+google_tag_manager_id	
+intercom_secret	
+reporting_distributor	grafana-labs
+reporting_enabled	true
+reporting_static_context	
+rudderstack_config_url	
+rudderstack_data_plane_url	
+rudderstack_integrations_url	
+rudderstack_sdk_url	
+rudderstack_write_key	
+annotations	
+cleanupjob_batchsize	100
+max_annotations_to_keep	
+tags_length	500
+annotations.api	
+max_age	
+max_annotations_to_keep	0
+annotations.dashboard	
+max_age	
+max_annotations_to_keep	0
+auth	
+api_key_max_seconds_to_live	-1
+azure_auth_enabled	false
+disable_login	false
+disable_login_form	false
+disable_signout_menu	false
+id_response_header_enabled	false
+id_response_header_namespaces	user api-key service-account
+id_response_header_prefix	X-Grafana
+login_cookie_name	grafana_session
+login_maximum_inactive_lifetime_duration	7d
+login_maximum_lifetime_duration	30d
+managed_service_accounts_enabled	false
+oauth_allow_insecure_email_lookup	false
+oauth_auto_login	false
+oauth_login_error_message	oauth.login.error
+oauth_refresh_token_server_lock_min_wait_ms	1000
+oauth_state_cookie_max_age	600
+signout_redirect_url	
+sigv4_auth_enabled	false
+sigv4_verbose_logging	false
+token_rotation_interval_minutes	10
+auth.anonymous	
+device_limit	0
+enabled	false
+hide_version	false
+hie_version	false
+org_name	Main.Org
+org_role	Viewer
+auth.azuread	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+allowed_organizations	
+api_url	
+auth_style	
+auth_url	https://login.microsoftonline.com/%3Ctenant-id%3E/oauth2/v2.0/authorize
+auto_login	false
+client_authentication	
+client_id	some_client_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+force_use_graph_api	false
+groups_attribute_path	
+hosted_domain	
+icon	microsoft
+managed_identity_client_id	
+name	Microsoft
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	openid email profile
+signout_redirect_url	
+skip_org_role_sync	false
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	https://login.microsoftonline.com/%3Ctenant-id%3E/oauth2/v2.0/token
+use_pkce	true
+use_refresh_token	true
+workload_identity_token_file	/var/run/secrets/azure/tokens/azure-identity-token
+auth.basic	
+enabled	true
+password_policy	*********
+auth.extended_jwt	
+enabled	false
+jwks_url	
+auth.generic_oauth	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+allowed_organizations	
+api_url	
+auth_style	
+auth_url	
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	email:primary
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	signin
+id_token_attribute_name	
+login_attribute_path	
+managed_identity_client_id	
+name	OAuth
+name_attribute_path	
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	user:email
+signout_redirect_url	
+skip_org_role_sync	false
+team_ids	
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	
+use_pkce	false
+use_refresh_token	false
+workload_identity_token_file	
+auth.github	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+allowed_organizations	
+api_url	https://api.github.com/user
+auth_style	
+auth_url	https://github.com/login/oauth/authorize
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	github
+managed_identity_client_id	
+name	GitHub
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	user:email,read:org
+signout_redirect_url	
+skip_org_role_sync	false
+team_ids	
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	https://github.com/login/oauth/access_token
+use_pkce	false
+use_refresh_token	false
+workload_identity_token_file	
+auth.gitlab	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+api_url	https://gitlab.com/api/v4
+auth_style	
+auth_url	https://gitlab.com/oauth/authorize
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	gitlab
+managed_identity_client_id	
+name	GitLab
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	openid email profile
+signout_redirect_url	
+skip_org_role_sync	false
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	https://gitlab.com/oauth/token
+use_pkce	true
+use_refresh_token	true
+workload_identity_token_file	
+auth.google	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+api_url	https://openidconnect.googleapis.com/v1/userinfo
+auth_style	
+auth_url	https://accounts.google.com/o/oauth2/v2/auth
+auto_login	false
+client_authentication	
+client_id	some_client_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	google
+managed_identity_client_id	
+name	Google
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	openid email profile
+signout_redirect_url	
+skip_org_role_sync	true
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	https://oauth2.googleapis.com/token
+use_pkce	true
+use_refresh_token	true
+validate_hd	true
+workload_identity_token_file	
+auth.grafana_com	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+allowed_organizations	
+api_url	
+auth_style	
+auth_url	
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	grafana
+managed_identity_client_id	
+name	Grafana.com
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	user:email
+skip_org_role_sync	false
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	
+use_pkce	false
+use_refresh_token	false
+workload_identity_token_file	
+auth.grafananet	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+allowed_organizations	
+api_url	
+auth_style	
+auth_url	
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	
+managed_identity_client_id	
+name	
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	user:email
+skip_org_role_sync	false
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	
+use_pkce	false
+use_refresh_token	false
+workload_identity_token_file	
+auth.jwt	
+allow_assign_grafana_admin	false
+auto_sign_up	false
+cache_ttl	60m
+email_attribute_path	
+email_claim	
+enable_login_token	false
+enabled	false
+expect_claims	{}
+groups_attribute_path	
+header_name	
+jwk_set_file	
+jwk_set_url	
+key_file	
+key_id	
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+skip_org_role_sync	false
+tls_skip_verify_insecure	false
+url_login	false
+username_attribute_path	
+username_claim	
+auth.ldap	
+active_sync_enabled	true
+allow_sign_up	true
+config_file	/etc/grafana/ldap.toml
+enabled	false
+skip_org_role_sync	false
+sync_cron	0 1 * * *
+auth.okta	
+allow_assign_grafana_admin	false
+allow_sign_up	true
+allowed_domains	
+allowed_groups	
+api_url	https://<tenant-id>.okta.com/oauth2/v1/userinfo
+auth_style	
+auth_url	https://<tenant-id>.okta.com/oauth2/v1/authorize
+auto_login	false
+client_authentication	
+client_id	some_id
+client_secret	
+email_attribute_name	
+email_attribute_path	
+empty_scopes	false
+enabled	false
+federated_credential_audience	
+groups_attribute_path	
+hosted_domain	
+icon	okta
+managed_identity_client_id	
+name	Okta
+org_attribute_path	
+org_mapping	
+role_attribute_path	
+role_attribute_strict	false
+scopes	openid profile email groups
+signout_redirect_url	
+skip_org_role_sync	false
+team_ids_attribute_path	
+teams_url	
+tls_client_ca	
+tls_client_cert	
+tls_client_key	
+tls_skip_verify_insecure	false
+token_url	https://<tenant-id>.okta.com/oauth2/v1/token
+use_pkce	true
+use_refresh_token	false
+workload_identity_token_file	
+auth.passwordless	
+code_expiration	*********
+enabled	*********
+auth.proxy	
+auto_sign_up	true
+enable_login_token	false
+enabled	false
+header_name	X-WEBAUTH-USER
+header_property	username
+headers	
+headers_encoded	false
+sync_ttl	15
+whitelist	
+auth.saml	
+enabled	false
+role_values_grafana_admin	
+skip_org_role_sync	false
+auth.scim	
+allow_non_provisioned_users	false
+user_sync_enabled	false
+authorization	
+cache_ttl	30s
+mode	inproc
+aws	
+allowed_auth_providers	default,keys,credentials
+assume_role_enabled	true
+external_id	
+forward_settings_to_plugins	cloudwatch,grafana-athena-datasource,grafana-redshift-datasource,grafana-x-ray-datasource,grafana-timestream-datasource,grafana-iot-sitewise-datasource,grafana-iot-twinmaker-app,grafana-opensearch-datasource,aws-datasource-provisioner,elasticsearch,prometheus,grafana-amazonprometheus-datasource,grafana-aurora-datasource
+list_metrics_page_limit	500
+session_duration	15m
+azure	
+azure_entra_password_credentials_enabled	*********
+cloud	AzureCloud
+clouds_config	
+forward_settings_to_plugins	grafana-azure-monitor-datasource,prometheus,grafana-azure-data-explorer-datasource,mssql,grafana-azureprometheus-datasource
+managed_identity_client_id	
+managed_identity_enabled	false
+user_identity_client_authentication	
+user_identity_client_id	
+user_identity_client_secret	
+user_identity_enabled	false
+user_identity_fallback_credentials_enabled	true
+user_identity_federated_credential_audience	
+user_identity_managed_identity_client_id	
+user_identity_token_url	
+username_assertion	
+workload_identity_client_id	
+workload_identity_enabled	false
+workload_identity_tenant_id	
+workload_identity_token_file	
+caching	
+enabled	true
+cloud_migration	
+alert_rules_state	paused
+auth_api_url	
+create_access_policy_timeout	5s
+create_token_timeout	5s
+create_upload_url_timeout	5s
+delete_access_policy_timeout	5s
+delete_token_timeout	5s
+developer_mode	false
+domain	grafana.net
+fetch_access_policy_timeout	5s
+fetch_instance_timeout	5s
+frontend_poll_interval	2s
+gcom_api_token	
+get_snapshot_status_timeout	5s
+is_target	false
+list_tokens_timeout	5s
+report_event_timeout	5s
+snapshot_folder	
+start_snapshot_timeout	5s
+token_expires_after	168h0m0s
+validate_key_timeout	5s
+dashboard_cleanup	
+batch_size	10
+interval	30s
+dashboards	
+dashboard_performance_metrics	
+default_home_dashboard_path	
+min_refresh_interval	5s
+panel_series_limit	0
+versions_to_keep	20
+database	
+ca_cert_path	
+cache_mode	private
+client_cert_path	
+client_key_path	
+conn_max-lifetime	14400
+conn_max_lifetime	14400
+connection_string	
+ensure_default_org_and_user	true
+high_availability	true
+host	127.0.0.1:3306
+instrument_queries	false
+isolation_level	
+locking_attempt_timeout_sec	0
+log_queries	false
+max_idle_conn	2
+max_open_conn	0
+migration_locking	true
+name	grafana
+password	
+path	/var/lib/grafana/grafana.db
+query_retries	0
+server_cert_name	
+skip_migrations	
+ssl_mode	disable
+ssl_sni	
+transaction_retries	5
+type	sqlite3
+url	
+user	root
+wal	false
+dataproxy	
+dialTimeout	10
+expect_continue_timeout_seconds	1
+idle_conn_timeout_seconds	90
+keep_alive_seconds	30
+logging	false
+max_conns_per_host	0
+max_idle_connections	100
+response_limit	0
+row_limit	1000000
+send_user_header	false
+timeout	30
+tls_handshake_timeout_seconds	10
+user_agent	
+datasources	
+concurrent_query_count	10
+datasource_limit	5000
+default_allow_recording_rules_target_alerts_ui_toggle	true
+default_manage_alerts_ui_toggle	true
+datasources.ip_range_security	
+allow_list	
+enabled	false
+secret_key	
+date_formats	
+default_timezone	browser
+default_week_start	browser
+full_date	YYYY-MM-DD HH:mm:ss
+interval_day	YYYY-MM-DD
+interval_hour	MM-DD HH:mm
+interval_millisecond	HH:mm:ss.SSS
+interval_minute	HH:mm
+interval_month	YYYY-MM
+interval_second	HH:mm:ss
+use_browser_locale	false
+default	
+instance_name	suricata-monitoring
+emails	
+content_types	text/html
+templates_pattern	emails/*.html,emails/*.txt
+welcome_email_on_sign_up	false
+enterprise	
+license_path	*********
+environment	
+local_file_system_available	true
+stack_id	
+stack_slug	
+explore	
+defaultTimeOffset	1h
+enabled	true
+hide_logs_download	false
+expressions	
+enabled	true
+sql_expression_cell_limit	100000
+sql_expression_output_cell_limit	100000
+sql_expression_timeout	10s
+external_image_storage	
+provider	
+external_image_storage.azure_blob	
+account_key	
+account_name	
+container_name	
+sas_token_expiration_days	
+external_image_storage.gcs	
+bucket	
+enable_signed_urls	false
+key_file	
+path	
+signed_url_expiration	
+external_image_storage.local	
+external_image_storage.s3	
+access_key	
+bucket	
+bucket_url	
+endpoint	
+path	
+path_style_access	
+region	
+secret_key	
+external_image_storage.webdav	
+password	
+public_url	
+url	
+username	
+feature_management	
+allow_editing	false
+hidden_toggles	
+read_only_toggles	
+update_webhook	
+update_webhook_token	
+feature_toggles	
+enable	
+feature_toggles.openfeature	
+provider	static
+targetingKey	http://192.168.10.25:3000/
+url	
+feature_toggles.openfeature.context	
+frontend_dev	
+betterer_eslint_rules	false
+fail_tests_on_console	true
+geomap	
+default_baselayer_config	
+enable_custom_baselayers	true
+grafana-apiserver	
+address	localhost:10000
+blob_threshold_bytes	0
+blob_url	
+etcd_servers	
+log_level	0
+search_server_address	
+storage_path	/var/lib/grafana/grafana-apiserver
+storage_type	unified
+grafana_com	
+api_url	https://grafana.com/api
+sso_api_token	
+url	https://grafana.com
+grafana_net	
+url	https://grafana.com
+grpc_client_authentication	
+grpc_server	
+address	127.0.0.1:10000
+cert_file	
+cert_key	
+enable_logging	false
+enabled	false
+key_file	
+max_recv_msg_size	0
+max_send_msg_size	0
+network	tcp
+use_tls	false
+help	
+enabled	true
+live	
+allowed_origins	
+ha_engine	
+ha_engine_address	127.0.0.1:6379
+ha_engine_password	
+ha_prefix	
+max_connections	100
+message_size_limit	65536
+log	
+enabled	true
+filters	
+level	info
+mode	console file
+user_facing_default_error	please inspect Grafana server log for details
+log.console	
+format	console
+level	info
+log.file	
+daily_rotate	true
+file_name	/var/log/grafana/grafana.log
+format	text
+level	info
+log_rotate	true
+max_days	7
+max_lines	1000000
+max_size_shift	28
+log.frontend	
+api_key	
+custom_endpoint	/log-grafana-javascript-agent
+enabled	false
+instrumentations_all_enabled	false
+instrumentations_console_enabled	false
+instrumentations_errors_enabled	true
+instrumentations_tracing_enabled	false
+instrumentations_webvitals_enabled	false
+internal_logger_level	0
+log_endpoint_burst_limit	15
+log_endpoint_requests_per_second_limit	3
+log.syslog	
+address	
+facility	
+format	text
+level	
+network	
+tag	
+metric.graphite	
+prefix	prod.grafana.%(instance_name)s.
+metrics	
+basic_auth_password	
+basic_auth_username	
+disable_total_stats	false
+enabled	true
+include_team_label	false
+interval_seconds	10
+total_stats_collector_interval_seconds	1800
+metrics.environment_info	
+metrics.graphite	
+address	
+prefix	prod.grafana.%(instance_name)s.
+navigation.app_sections	
+navigation.app_standalone_pages	
+news	
+news_feed_enabled	true
+oauth2_server	
+access_token_lifespan	3m0s
+enabled	false
+generated_key_type_for_client	
+panels	
+disable_sanitize_html	false
+enable_alpha	false
+paths	
+data	/var/lib/grafana
+logs	/var/log/grafana
+permitted_provisioning_paths	devenv/dev-dashboards%7Cconf/provisioning
+plugins	/var/lib/plugins
+provisioning	/etc/grafana/provisioning
+temp_dat_lifetime	24h
+temp_data_lifetime	24h
+plugin.grafana-image-renderer	
+grpc_host	
+grpc_port	
+rendering_args	
+rendering_chrome_bin	
+rendering_clustering_max_concurrency	
+rendering_clustering_mode	
+rendering_clustering_timeout	
+rendering_dumpio	
+rendering_ignore_https_errors	
+rendering_language	
+rendering_mode	
+rendering_timezone	
+rendering_timing_metrics	
+rendering_tracing_url	
+rendering_verbose_logging	
+rendering_viewport_device_scale_factor	
+rendering_viewport_max_device_scale_factor	
+rendering_viewport_max_height	
+rendering_viewport_max_width	
+plugins	
+allow_loading_unsigned_plugins	
+app_tls_skip_verify_insecure	false
+cdn_base_url	
+disable_plugins	
+enable_alpha	false
+forward_host_env_vars	
+hide_angular_deprecation	
+log_backend_requests	false
+plugin_admin_enabled	true
+plugin_admin_external_manage_enabled	false
+plugin_catalog_hidden_plugins	
+plugin_catalog_url	https://grafana.com/grafana/plugins/
+preinstall	
+preinstall_async	true
+preinstall_disabled	false
+preinstall_sync	
+public_key_retrieval_disabled	false
+public_key_retrieval_on_startup	false
+update_strategy	minor
+profile	
+enabled	true
+public_dashboards	
+enabled	true
+query	
+concurrent_query_limit	2
+query_history	
+enabled	true
+quota	
+alerting_rule_evaluation_results	-1
+alerting_rule_group_rules	100
+enabled	false
+global_alert_rule	-1
+global_api_key	-1
+global_correlations	-1
+global_dashboard	-1
+global_data_source	-1
+global_file	1000
+global_org	-1
+global_session	-1
+global_user	-1
+org_alert_rule	100
+org_api_key	10
+org_dashboard	100
+org_data_source	10
+org_user	10
+user_org	10
+rbac	
+only_store_access_action_sets	false
+permission_cache	true
+permission_validation_enabled	true
+reset_basic_roles	false
+resources_with_managed_permissions_on_creation	dashboard,folder,service-account,datasource
+resources_with_seeded_wildcard_access	
+single_organization	false
+zanzana_reconciliation_interval	1h
+recorded_queries	
+enabled	true
+recording_rules	
+default_datasource_uid	
+enabled	true
+timeout	10s
+recording_rules.custom_headers	
+remote.alertmanager	
+password	
+sync_interval	5m
+tenant	
+timeout	30s
+url	
+remote_cache	
+connstr	
+encryption	false
+prefix	
+type	database
+rendering	
+callback_url	
+concurrent_render_request_limit	30
+default_image_height	500
+default_image_scale	1
+default_image_width	1000
+render_key_lifetime	5m
+renderer_token	*********
+server_url	
+reporting	
+enabled	true
+resource_api	
+db_log_queries	false
+db_type	
+scopes	
+list_dashboards_endpoint	
+list_scopes_endpoint	
+search	
+dashboard_loading_batch_size	200
+full_reindex_interval	5m
+index_update_interval	10s
+secrets_manager	
+available_encryption_providers	
+encryption_provider	*********
+secret_key	*********
+secretscan	
+base_url	*********
+enabled	*********
+interval	*********
+oncall_url	
+revoke	*********
+secure_socks_datasource_proxy	
+allow_insecure	false
+client_cert	
+client_key	
+enabled	false
+proxy_address	
+root_ca_cert	
+server_name	
+show_ui	true
+security	
+actions_allow_post_url	
+admin_email	admin@localhost
+admin_password	*********
+admin_user	admin
+allow_embedding	false
+allow_org_create	false
+allow_sign_up	false
+angular_support_enabled	false
+auto_assign_org	true
+auto_assign_org_role	Viewer
+available_encryption_providers	
+brute_force_login_protection_max_attempts	5
+content_security_policy	false
+content_security_policy_report_only	false
+content_security_policy_report_only_template	script-src 'self' 'unsafe-eval' 'unsafe-inline' 'strict-dynamic' $NONCE;object-src 'none';font-src 'self';style-src 'self' 'unsafe-inline' blob:;img-src * data:;base-uri 'self';connect-src 'self' grafana.com ws://$ROOT_PATH wss://$ROOT_PATH;manifest-src 'self';media-src 'none';form-action 'self';
+content_security_policy_template	script-src 'self' 'unsafe-eval' 'unsafe-inline' 'strict-dynamic' $NONCE;object-src 'none';font-src 'self';style-src 'self' 'unsafe-inline' blob:;img-src * data:;base-uri 'self';connect-src 'self' grafana.com ws://$ROOT_PATH wss://$ROOT_PATH;manifest-src 'self';media-src 'none';form-action 'self';
+cookie_remember_name	grafana_remember
+cookie_samesite	lax
+cookie_secure	false
+cookie_username	grafana_user
+csrf_additional_headers	
+csrf_always_check	false
+csrf_trusted_origins	
+data_source_proxy_whitelist	
+disable_brute_force_login_protection	false
+disable_gravatar	false
+disable_initial_admin_creation	false
+disable_ip_address_login_protection	true
+enable_frontend_sandbox_for_plugins	
+encryption_provider	secretKey.v1
+hide_version	false
+login_remember_days	7
+secret_key	*********
+strict_transport_security	false
+strict_transport_security_max_age_seconds	86400
+strict_transport_security_preload	false
+strict_transport_security_subdomains	false
+x_content_type_options	true
+x_xss_protection	true
+security.encryption	
+algorithm	aes-cfb
+data_keys_cache_cleanup_interval	1m
+data_keys_cache_ttl	15m
+server	
+cdn_url	
+cert_file	
+cert_key	
+cert_pass	
+certs_watch_interval	0s
+domain	192.168.10.25
+enable_gzip	false
+enforce_domain	false
+http_addr	0.0.0.0
+http_port	3000
+min_tls_version	TLS1.2
+protocol	http
+read_timeout	0
+root_url	http://192.168.10.25:3000/
+router_logging	false
+serve_from_sub_path	false
+socket	/tmp/grafana.sock
+socket_gid	-1
+socket_mode	0660
+static_root_path	public
+server.custom_response_headers	
+service_accounts	
+token_expiration_day_limit	-1
+short_links	
+expire_time	7
+smtp	
+cert_file	
+ehlo_identity	
+enable_tracing	false
+enabled	false
+from_address	admin@grafana.localhost
+from_name	Grafana
+host	localhost:25
+key_file	
+password	
+skip_verify	false
+startTLS_policy	
+user	
+smtp.static_headers	
+snapshots	
+enabled	true
+external_enabled	false
+external_snapshot_name	Publish to snapshots.raintank.io
+external_snapshot_url	https://snapshots.raintank.io
+public_mode	false
+sql_datasources	
+max_conn_lifetime_default	14400
+max_idle_conns_default	100
+max_open_conns_default	100
+sso_settings	
+configurable_providers	github gitlab google generic_oauth azuread okta
+reload_interval	1m
+storage	
+allow_unsanitized_svg_upload	false
+support_bundles	
+enabled	true
+public_keys	
+server_admin_only	true
+time_picker	
+default_timezone	browser
+interval_day	MM/DD
+interval_hour	MM/DD HH:mm
+interval_minute	HH:mm
+interval_month	YYYY-MM
+interval_second	HH:mm:ss
+interval_year	YYYY
+quick_ranges	
+use_browser_locale	false
+tracing.jaeger	
+address	
+always_included_tag	
+disable_shared_zipkin_spans	false
+sampler_param	1
+sampler_type	const
+sampling_server_url	
+zipkin_propagation	false
+tracing.opentelemetry	
+custom_attributes	
+sampler_param	0
+sampler_type	
+sampling_server_url	
+tracing.opentelemetry.jaeger	
+address	
+propagation	
+tracing.opentelemetry.otlp	
+address	
+insecure	true
+propagation	
+unified_alerting	
+admin_config_poll_interval	60s
+alertmanager_config_poll_interval	60s
+alertmanager_max_silence_size_bytes	0
+alertmanager_max_silences_count	0
+deleted_rule_retention	720h0m0s
+disable_jitter	false
+disabled_orgs	
+enabled	
+evaluation_timeout	30s
+execute_alerts	true
+ha_advertise_address	
+ha_gossip_interval	200ms
+ha_label	
+ha_listen_address	0.0.0.0:9094
+ha_peer_timeout	15s
+ha_peers	
+ha_push_pull_interval	60s
+ha_reconnect_timeout	6h
+ha_redis_address	
+ha_redis_cluster_mode_enabled	false
+ha_redis_db	0
+ha_redis_max_conns	5
+ha_redis_password	
+ha_redis_peer_name	
+ha_redis_prefix	
+ha_redis_sentinel_master_name	
+ha_redis_sentinel_mode_enabled	false
+ha_redis_sentinel_password	
+ha_redis_sentinel_username	
+ha_redis_tls_ca_path	
+ha_redis_tls_cert_path	
+ha_redis_tls_cipher_suites	
+ha_redis_tls_enabled	false
+ha_redis_tls_insecure_skip_verify	false
+ha_redis_tls_key_path	
+ha_redis_tls_min_version	
+ha_redis_tls_server_name	
+ha_redis_username	
+initialization_timeout	30s
+max_attempts	3
+max_state_save_concurrency	1
+min_interval	10s
+notification_log_retention	5d
+resolved_alert_retention	15m
+rule_version_record_limit	0
+scheduler_tick_interval	10s
+state_periodic_save_batch_size	1
+state_periodic_save_interval	5m
+unified_alerting.prometheus_conversion	
+rule_query_offset	1m
+unified_alerting.reserved_labels	
+disabled_labels	
+unified_alerting.screenshots	
+capture	false
+capture_timeout	10s
+max_concurrent_screenshots	5
+upload_external_image_storage	false
+unified_alerting.state_history	
+backend	annotations
+enabled	true
+loki_basic_auth_password	
+loki_basic_auth_username	
+loki_max_query_length	721h
+loki_max_query_size	65536
+loki_remote_read_url	
+loki_remote_url	
+loki_remote_write_url	
+loki_tenant_id	
+primary	
+prometheus_metric_name	GRAFANA_ALERTS
+prometheus_target_datasource_uid	
+prometheus_write_timeout	10s
+secondaries	
+unified_alerting.state_history.annotations	
+max_age	
+max_annotations_to_keep	
+unified_alerting.state_history.external_labels	
+unified_storage	
+ca_cert_path	
+enable_sharding	false
+https_skip_verify	false
+index_cache_ttl	10m0s
+index_file_threshold	10
+index_max_batch_size	100
+index_max_count	0
+index_min_count	1
+index_path	
+index_rebuild_interval	24h0m0s
+index_workers	10
+instance_id	
+max_page_size_bytes	0
+memberlist_advertise_addr	
+memberlist_advertise_port	7946
+memberlist_bind_addr	
+memberlist_cluster_label	
+memberlist_cluster_label_verification_disabled	false
+memberlist_join_member	
+qos_enabled	false
+qos_max_size_per_tenant	1000
+qos_num_worker	16
+sprinkles_api_server	
+sprinkles_api_server_page_limit	100
+users	
+allow_org_create	false
+allow_sign_up	false
+allow_sing_up	false
+auto_assign_org	true
+auto_assign_org_id	1
+auto_assign_org_role	Viewer
+default_language	en-US
+default_theme	dark
+editors_can_admin	false
+external_manage_analytics	false
+external_manage_analytics_params	
+external_manage_info	
+external_manage_link_name	
+external_manage_link_url	
+hidden_users	
+home_page	
+last_seen_update_interval	15m
+login_default_org_id	-1
+login_hint	email or username
+password_hint	*********
+user_invite_max_lifetime_duration	24h
+verification_email_max_lifetime_duration	1h
+verify_email_enabled	false
+viewers_can_edit	false
+zanzana.client	
+address	
+mode	embedded
+tls_cert	
+token	
+token_exchange_url	
+zanzana.server	
+allow_insecure	false
+check_query_cache	true
+check_query_cache_ttl	10s
+http_addr	127.0.0.1:8080
+list_objects_deadline	3s
+list_objects_max_results	1000
+signing_keys_url	
+use_streamed_list_objects	false
