@@ -2,21 +2,26 @@
 Perimeter-Lab — a hands-on network security lab with Suricata IPS/IDS, Grafana dashboards, DNS-over-HTTPS on OpenWrt, and RouterOS routing. All client traffic passes through the IPS, while DNS queries are encrypted. Includes configs and dashboards for learning and practice.
 
 
-Config RouterOs
 /interface ethernet
 set [ find default-name=ether1 ] name=LAN
 set [ find default-name=ether2 ] name=WAN
+
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
+
 /ip address
 add address=192.168.1.2/24 interface=LAN network=192.168.1.0
 add address=192.168.1.3/24 interface=WAN network=192.168.1.0
+
 /ip dhcp-client
 add disabled=no interface=LAN
+
 /ip firewall nat
 add action=masquerade chain=srcnat out-interface=WAN
+
 /ip route
 add distance=1 gateway=192.168.1.1
+
 
 
 🔒 OpenWrt: Configuring DNS-over-HTTPS with https-dns-proxy
