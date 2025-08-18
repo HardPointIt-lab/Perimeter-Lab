@@ -15,7 +15,9 @@ Example view of Suricata alerts in Grafana:
 ---
 
 ## ⚙️ Components
-
+## 🔎 Optional Components
+- **Elasticsearch + Filebeat** – log storage and search for Suricata `eve.json`  
+- **Kibana or Grafana-Loki** – advanced visualization of alerts  
 - **Suricata** – IPS/IDS in inline mode with `eve.json` logs  
 - **Grafana** – dashboards for alerts, TLS traffic, and statistics  
 - **OpenWrt + DoH** – secure DNS using `https-dns-proxy`  
